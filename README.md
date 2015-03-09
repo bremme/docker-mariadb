@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+Table of Contents
+
+- [Docker MariaDB 10.0](#docker-mariadb-100)
+- [Building image](#building-image)
+- [Running container](#running-container)
+  - [Just run](#just-run)
+  - [Recommended use](#recommended-use)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Docker MariaDB 10.0
 
 Docker images of MariaDB 10.0 build on Debian Jessie. Admin user, password, host and ports can be set using environmental variables.

@@ -17,7 +17,7 @@ else
 		--env-file=__private_vars.env \
 		--volumes-from=data-mariadb \
 		--volume=/etc/timezone:/etc/timezone:ro \
-		--publish=3306:3306 \
+		--publish=127.0.0.1:3306:3306 \
 		--name mariadb \
 		--restart=always \
 		--detach=true \
