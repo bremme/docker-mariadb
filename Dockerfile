@@ -24,6 +24,7 @@ ENV MYSQL_PORT 3306
 # only applies when /var/lib/mysql/mysql is empty
 ENV MYSQL_ADMIN_PASS password
 ENV MYSQL_ADMIN_USER admin
+ENV MYSQL_ADMIN_HOST %
 
 # Add volumes
 VOLUME  ["/etc/mysql", "/var/lib/mysql"]

@@ -16,6 +16,14 @@ if [[ ! -d $VOLUME_HOME/mysql ]]; then
     /usr/local/bin/create_mariadb_admin_user.sh
 else
     echo "=> Using an existing volume of MariaDB"
+    echo "========================================================================"
+	echo "You can now connect to this MariaDB Server using:"
+	echo ""
+	echo "    mysql -u$MYSQL_ADMIN_USER -p<password> -h$(hostname --ip-address) -P$MYSQL_PORT"
+	echo ""
+	echo "Please remember to change the above password as soon as possible!"
+	echo "MariaDB user 'root' has no password but only allows local connections"
+	echo "========================================================================"
 fi
 
 exec mysqld_safe --defaults-file=$MYSQL_CNF

@@ -15,8 +15,8 @@ PASS=${MYSQL_ADMIN_PASS:-$(< /dev/urandom tr -dc A-Z-a-z-0-9 | head -c${1:-24};e
 _word=$( [ ${MYSQL_ADMIN_PASS} ] && echo "preset" || echo "random" )
 echo "=> Creating MariaDB admin user with ${_word} password"
 
-mysql -uroot -e "CREATE USER '$MYSQL_ADMIN_USER'@'%' IDENTIFIED BY '$PASS'"
-mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO '$MYSQL_ADMIN_USER'@'%' WITH GRANT OPTION"
+mysql -uroot -e "CREATE USER '$MYSQL_ADMIN_USER'@'$MYSQL_ADMIN_HOST' IDENTIFIED BY '$PASS'"
+mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO '$MYSQL_ADMIN_USER'@'$MYSQL_ADMIN_HOST' WITH GRANT OPTION"
 
 echo "=> Done!"
 
